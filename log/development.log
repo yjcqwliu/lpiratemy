@@ -1,1 +1,286 @@
 ﻿
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:27:48) [POST]
+  Session ID: f14f27c2b2cd1ed5366265db79b8600b
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"66f952b4a18a29a1c83433de520c861d", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052070", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58d660018d6a89ef7d4c3aa4d2e2a", "my_sig_in_canvas"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58d660018d6a89ef7d4c3aa4d2e2a', `updated_at` = '2008-10-15 06:27:49' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.016000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.29700 (3 reqs/sec) | Rendering: 0.14000 (47%) | DB: 0.06300 (21%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:27:53) [POST]
+  Session ID: f9f8f34f9f1476c85f5ce48a0366f1ba
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"dfe41c30f4d7ad45bc41c33c176974ef", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052074", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58d6a0018d6a83b304c4a7f3e2c0d", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58d6a0018d6a83b304c4a7f3e2c0d', `updated_at` = '2008-10-15 06:27:53' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.01500 (15%) | DB: 0.04700 (49%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:31:39) [POST]
+  Session ID: 541c7379dad32eaf68f42cfe51d2f56f
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"cce6b348debb6078e31a924b6391c567", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052300", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58e4c0018d6a8fa8c051c63ec3051", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58e4c0018d6a8fa8c051c63ec3051', `updated_at` = '2008-10-15 06:31:39' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.35900 (2 reqs/sec) | Rendering: 0.10800 (30%) | DB: 0.09500 (26%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:31:55) [POST]
+  Session ID: 9bdf1a4af3ce6fee3991df2a2a332107
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"0ec747742b443aa04ff9849e7ba8742c", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052316", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58e5c0018d6a84b2a59da4bdc3918", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58e5c0018d6a84b2a59da4bdc3918', `updated_at` = '2008-10-15 06:31:55' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (50%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:32:04) [POST]
+  Session ID: c369af02d6bcaa3c1773cd0b0ca31aca
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"056fa5318508783479d1c12c2c39bb7d", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052325", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58e650018d6a82506dbcb73867f22", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58e650018d6a82506dbcb73867f22', `updated_at` = '2008-10-15 06:32:04' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.109000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.17200 (5 reqs/sec) | Rendering: 0.01600 (9%) | DB: 0.12400 (72%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:32:23) [POST]
+  Session ID: affd9d99f82eec2dbbf1e76bcd67a147
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"8c31a15972177876413bc023443f5241", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052345", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58e790018d6a80015d1f9a30e4dd2", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58e790018d6a80015d1f9a30e4dd2', `updated_at` = '2008-10-15 06:32:23' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.37500 (2 reqs/sec) | Rendering: 0.26500 (70%) | DB: 0.06300 (16%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:32:29) [POST]
+  Session ID: 24573c929242d67c7b02b735ec904a09
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"6bbad896133abb4f42247e1bc6e018ae", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052350", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58e7e0018d6a8d38d3ecfe677bce8", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58e7e0018d6a8d38d3ecfe677bce8', `updated_at` = '2008-10-15 06:32:29' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (39%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:32:44) [POST]
+  Session ID: 7f0574aa61a28a47ae7668167822144e
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"f797095836440bea4d689ca1a1ca43dd", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052366", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58e8e0018d6a88ce4ce6bd71244df", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.015000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58e8e0018d6a88ce4ce6bd71244df', `updated_at` = '2008-10-15 06:32:44' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.01600 (17%) | DB: 0.06200 (65%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:38:41) [POST]
+  Session ID: 083bc130167a4562571e15485acfc798
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"15bc75f6a3776fd3b2bc4cbd9b281a9a", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052722", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58ff20018d6a87aefca46ab5c9593", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58ff20018d6a87aefca46ab5c9593', `updated_at` = '2008-10-15 06:38:41' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.23400 (4 reqs/sec) | Rendering: 0.10900 (46%) | DB: 0.06300 (26%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:38:46) [POST]
+  Session ID: 229408d6dbef762727176ce0476ee88c
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"30c307317e87bcf201f1b63d2f9fc113", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052727", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f58ff70018d6a8dc3d34617578a05b", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f58ff70018d6a8dc3d34617578a05b', `updated_at` = '2008-10-15 06:38:46' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.01600 (17%) | DB: 0.04600 (48%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:40:09) [POST]
+  Session ID: 82022f8941f579ffcf4d9ee08cb9fd0a
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"39d2f7eb1416666e5509bc0e0aab9238", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052810", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f5904a0018d6a8ef14ef782c039d1d", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f5904a0018d6a8ef14ef782c039d1d', `updated_at` = '2008-10-15 06:40:09' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03200 (41%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:41:26) [POST]
+  Session ID: f41d4f1501d056ff44f334560b3ef440
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"423993fdd78233657b8069c7f24e7428", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052887", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f590970018d6a8efb95a04aa481115", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f590970018d6a8efb95a04aa481115', `updated_at` = '2008-10-15 06:41:26' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.21800 (4 reqs/sec) | Rendering: 0.07800 (35%) | DB: 0.09400 (43%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:41:30) [POST]
+  Session ID: 8c7094e87e387b87fbd7db3d75217b0c
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"9262a4e7a5da3d0b416a5dd982af6fce", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052891", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f5909b0018d6a8b7af9398888820a3", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f5909b0018d6a8b7af9398888820a3', `updated_at` = '2008-10-15 06:41:30' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.21900 (4 reqs/sec) | Rendering: 0.01600 (7%) | DB: 0.04600 (21%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:41:54) [POST]
+  Session ID: 613cf12dd9bdd78e19bb844360869f3b
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"d1bf14a79bd7e2b4248f1fa2895bc835", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052915", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f590b30018d6a899702328c9c8b7ff", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f590b30018d6a899702328c9c8b7ff', `updated_at` = '2008-10-15 06:41:54' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.21900 (4 reqs/sec) | Rendering: 0.07800 (35%) | DB: 0.09300 (42%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-15 14:42:02) [POST]
+  Session ID: ed9bbddc24c21e3f84827f2d763cf97d
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"e63af8901631f53e80a1105c00dec6e4", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052923", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f590bb0018d6a8039fe25980f76a7b", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f590bb0018d6a8039fe25980f76a7b', `updated_at` = '2008-10-15 06:42:02' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1630999' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.18800 (5 reqs/sec) | Rendering: 0.09400 (49%) | DB: 0.06300 (33%) | 200 OK [http://61.172.255.117/home/friend?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-15 14:43:09) [POST]
+  Session ID: 88c47abdaef65924bb15a55f2e4df6ce
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"ba7f8afb27f315e7bd76d09f8b661073", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052990", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f590fe0018d6a881d2243c02981194", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f590fe0018d6a881d2243c02981194', `updated_at` = '2008-10-15 06:43:09' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNotice Load (0.000000)[0m   [0mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.000000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;35;1mNotice Columns (0.000000)[0m   [0mSHOW FIELDS FROM `notices`[0m
+Completed in 0.35900 (2 reqs/sec) | Rendering: 0.11000 (30%) | DB: 0.06200 (17%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-15 14:43:14) [POST]
+  Session ID: 4c387cb7614fcb00e6a4fe49a32b64dc
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"5426d0faf3286f0d455c3132c0f89738", "my_sig_v"=>"0.1", "my_sig_time"=>"1224052995", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1630999,1641434,1670869,1960366", "my_sig_sessionId"=>"48f591030018d6a8ff366d90857324e8", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n', `session_key` = '48f591030018d6a8ff366d90857324e8', `updated_at` = '2008-10-15 06:43:14' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1630999','1641434','1670869','1960366') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04800 (51%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
