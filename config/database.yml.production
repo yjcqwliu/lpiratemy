@@ -4,5 +4,5 @@ production:
   adapter: mysql
   database: lpiratemy_production
   host: localhost
-  username: lpirate
-  password: as20s@sx92
+  username: lpiratemy
+  password: kas5dejf2
