@@ -1,0 +1,8 @@
+修改日志
+
+2008.10.10
+  增加贸易功能
+  用户可以自由贸易来赚取金币
+  原“免费码头”改为“贸易码头”
+  对于安装用户可以对其进行“贸易”，非安装用户可以对其进行“倒卖”来获得装备的奖励，同时发出邀请和通知
+  users表增加字段：business_level(贸易等级)business_top(今日贸易限制)business_count(今日贸易次数)business_updated_at(上次贸易日期)business_exp(当前贸易经验)award_updated_at(上次奖励时间)
