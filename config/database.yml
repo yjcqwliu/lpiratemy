@@ -19,7 +19,7 @@ test:
 
 production:
   adapter: mysql
-  database: lpirate
+  database: lpiratemy_production
   host: localhost
-  username: root
-  password:
+  username: lpiratemy
+  password: kas5dejf2
