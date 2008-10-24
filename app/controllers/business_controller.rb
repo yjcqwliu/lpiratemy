@@ -35,9 +35,7 @@ class BusinessController < ApplicationController
 	     ids = params[:ids]
 	 	 pp("--------------ids:#{ids.inspect}---------------")
 	     if ids 
-		    @user = User.find(:all,
-			                  :conditions => [" xid = ? ",ids.to_s]
-							  )
+		    @user = User.find(ids)
 			if @user && @user.length >0 
 			    @user = @user.first
 			
