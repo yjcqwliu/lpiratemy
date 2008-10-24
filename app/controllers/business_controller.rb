@@ -36,8 +36,7 @@ class BusinessController < ApplicationController
 	 	 pp("--------------ids:#{ids.inspect}---------------")
 	     if ids 
 		    @user = User.find(ids)
-			if @user && @user.length >0 
-			    @user = @user.first
+			if @user 
 			
 				if canbusiness
 					@current_user.business_count = 0 if @current_user.business_count.nil?
