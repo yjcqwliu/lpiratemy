@@ -39,7 +39,7 @@ def request_form(attribute)
    attribute.each do |key,value| 
       ml += "#{key}=\"#{value}\" "
    end
-   ml += "/>"
+   ml += " >"
 end
 
 def end_request_form()

@@ -74,10 +74,11 @@ class ApplicationController < ActionController::Base
   def xn_redirect_to(to_url,feilds={})
     path = "#{to_url}?"
         feilds.each do |key,value|
-	     path += "#{key}=#{URI.escape(value)}&"
+			if value
+			 path += "#{key}=#{URI.escape(value)}&"
+			end
         end
-    render :text => "
-    <my:redirect url=\"#{path}\"/>"
+    render :text => "<my:redirect url=\"#{path}\"/>"
 	#render :text => "你没有权限操作"
   end
 

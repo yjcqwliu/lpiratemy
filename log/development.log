@@ -2774,3 +2774,1589 @@ Rendering home/index
   [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
   [4;35;1mNotice Columns (0.015000)[0m   [0mSHOW FIELDS FROM `notices`[0m
 Completed in 0.25000 (4 reqs/sec) | Rendering: 0.09400 (37%) | DB: 0.09400 (37%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-24 12:08:32) [POST]
+  Session ID: 623d4fed557071061bf5a8b3d3910714
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"fb1e6b55cba5ee681add27ac80b819d5", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821325", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014a4d0018d6a8e0d7c2a4407c139c", "my_sig_in_canvas"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014a4d0018d6a8e0d7c2a4407c139c', `updated_at` = '2008-10-24 04:08:32' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.28200 (3 reqs/sec) | Rendering: 0.14200 (50%) | DB: 0.09300 (32%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:08:35) [POST]
+  Session ID: 947abffe44d948e6e3293f5a75893754
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"eb40d0657c45342738911c2f2b51a137", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821328", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014a500018d6a857c48fddd533c78a", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014a500018d6a857c48fddd533c78a', `updated_at` = '2008-10-24 04:08:35' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-24 04:08:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '1591478', 0, NULL, '2008-10-24 04:08:35')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.016000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.015000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-24 04:08:35', 1, 200, 10, 1000, 44, '2008-10-24 04:08:35', NULL)[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.29700 (3 reqs/sec) | Rendering: 0.03100 (10%) | DB: 0.14000 (47%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-10-24 12:08:38) [POST]
+  Session ID: 8b0724d0786e7afc9107c9b10a69ae71
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"ccdaf958da0b833beb52f2d413305afa", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821331", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "dock"=>"贸易", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014a530018d6a8966306fe820c0d6c", "my_sig_in_canvas"=>"1"}
+
+
+ActionController::RoutingError (No route matches "/1007758/business/business/44" with {:method=>:post}):
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:09:15) [POST]
+  Session ID: d3097b8bcca27746b49789e2dcf9c41f
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"c12219b46ee74619c97adb3b1f595968", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821368", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014a780018d6a88e3bae2d81a63d38", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.015000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014a780018d6a88e3bae2d81a63d38', `updated_at` = '2008-10-24 04:09:15' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.23400 (4 reqs/sec) | Rendering: 0.11000 (47%) | DB: 0.07800 (33%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:09:32) [POST]
+  Session ID: 10d0958669f146c6da3f9003b3c38872
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"a691e529774e0eda4cef32bcc8f38b85", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821385", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014a890018d6a80aabafd961a77465", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014a890018d6a80aabafd961a77465', `updated_at` = '2008-10-24 04:09:32' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.046000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.000000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.015000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.23400 (4 reqs/sec) | Rendering: 0.12600 (53%) | DB: 0.07700 (32%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:18:46) [POST]
+  Session ID: b2e3c925ea91241470a0a0cee8d7ec78
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"8e361341f72fe5faea2c2f0e275547a4", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821939", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014cb30018d6a89ab869c12c76a9bb", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014cb30018d6a89ab869c12c76a9bb', `updated_at` = '2008-10-24 04:18:46' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+ERROR: compiling _run_erb_47app47views47home47index46html46erb RAISED compile error
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ':', expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected '}', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ',', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ')', expecting kEND
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                            ^
+Function body: def _run_erb_47app47views47home47index46html46erb(local_assigns)
+_erbout = '';  ml = Ml.new ; _erbout.concat "\n"
+_erbout.concat "<style type=\"text/css\">\n"
+_erbout.concat "#mybody {\n"
+_erbout.concat "\twidth: 620px;\n"
+_erbout.concat "\tfloat:left;\n"
+_erbout.concat "\tpadding: 5px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#docklist{\n"
+_erbout.concat "}\n"
+_erbout.concat "#roblist{\n"
+_erbout.concat "}\n"
+_erbout.concat ".dock {\n"
+_erbout.concat "\tfloat: left;\n"
+_erbout.concat "\twidth:155px;\n"
+_erbout.concat "\ttext-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat "#friendlist {\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "width:160px;\n"
+_erbout.concat "height:300px;\n"
+_erbout.concat "overflow:auto;\n"
+_erbout.concat "}\n"
+_erbout.concat "\n"
+_erbout.concat "#islandinfo{\n"
+_erbout.concat "\tcolor:red;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat "#piratenews{\n"
+_erbout.concat "\tcolor:green;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticeone {\n"
+_erbout.concat "height:25px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticecontent {\n"
+_erbout.concat "float:left;\n"
+_erbout.concat "height:28px;\n"
+_erbout.concat "width:500px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#myshipspan{\n"
+_erbout.concat "\tcolor:blue;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat ".ship{\n"
+_erbout.concat "float:left;\n"
+_erbout.concat "width:180px;\n"
+_erbout.concat "text-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat "\n"
+_erbout.concat "h4 {\n"
+_erbout.concat "text-align:center;height:25px;background:#D8DFEA none repeat scroll 0%;\n"
+_erbout.concat "border-top:1px solid #3B5888;font-size:14px;font-weight:bold;line-height:25px;font-weight:bold;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gray{\n"
+_erbout.concat "color: #666666;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gotofriend{\n"
+_erbout.concat "color:#0000ff;\n"
+_erbout.concat "text-align:right;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticetime {\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "}\n"
+_erbout.concat "#notify\n"
+_erbout.concat "{\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "width:160px;\n"
+_erbout.concat "height:100px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#business_dock\n"
+_erbout.concat "{\n"
+_erbout.concat "border:2px solid #225599;\n"
+_erbout.concat "float: left;\n"
+_erbout.concat "width:151px;\n"
+_erbout.concat "text-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gorob{\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "text-size:15px;\n"
+_erbout.concat "}\n"
+_erbout.concat "</style>\n"
+_erbout.concat "\n"
+_erbout.concat "<div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"mybody\">\n"
+_erbout.concat "<div class=\"gotofriend\"></div>\n"
+_erbout.concat "<div id=\"islandinfo\">"; _erbout.concat(( ml.userpic("uid" => @user.xid,"linked"=>"true") ).to_s); _erbout.concat(( ml.name("uid"=>@user.xid)).to_s); _erbout.concat "\347\232\204\345\260\217\345\262\233<span class=\"gorob\">"; _erbout.concat(( link_to ">>去抢劫好友",:controller => :home ,:action => :friend  ).to_s); _erbout.concat "</span><br>\n"
+_erbout.concat "<hr /></div>\n"
+_erbout.concat "<div id=\"docklist\">\n"
+_erbout.concat "<div id=\"dock1\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"dock2\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"dock3\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"business_dock\" >"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\350\264\270\346\230\223\347\240\201\345\244\264<br>\n"
+_erbout.concat "&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock4 == nil or @user.dock4 == 0) and @current_user.xid != @user.xid
+_erbout.concat(( ml.if_is_app_user({"uid" => @user.xid}) ).to_s); _erbout.concat " \n"
+_erbout.concat "<form action=\"/1007758/business/business/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\"> \n"
+_erbout.concat " "; _erbout.concat(( submit_tag "贸易" , :name => "dock" ,:value => "贸易" ).to_s); _erbout.concat "\n"
+_erbout.concat "</form>\n"
+_erbout.concat(( ml.mlelse ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.end_request_form ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat(( ml.end_mlelse ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.end_if_is_app_user ).to_s); _erbout.concat " \n"
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t \n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock4 and @user.dock4 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t</div>\n"
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<form action=\"/1007758/home/rob/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\">\n"
+_erbout.concat "<div id=\"roblist\">\n"
+_erbout.concat "\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock1 == nil or @user.dock1 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头1" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock1 and @user.dock1 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock1) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t \345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock1_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201\n"
+_erbout.concat "\t\t\t\t ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头1" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t  ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock2 == nil or @user.dock2 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头2" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock2 and @user.dock2 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock2) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t ";  if @user.dock2_time ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock2_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头2" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock3 == nil or @user.dock3 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头3" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock3 and @user.dock3 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock3) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t ";  if @user.dock3_time ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock3_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头3" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div id=\"shiplist\">\n"
+_erbout.concat "<hr />\n"
+_erbout.concat "<span id=\"myshipspan\">\346\210\221\347\232\204\350\210\271\345\217\252</span><br>\n"
+ @current_user.usership.each do |ship|  
+_erbout.concat "\t<div class=\"ship\">\n"
+_erbout.concat "    \n"
+_erbout.concat "\t"; _erbout.concat(( usershipimg(ship)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t"; _erbout.concat(( radio_button  "usership","id", ship.id , :checked => "checked" ).to_s); _erbout.concat " "; _erbout.concat(( ship.name ).to_s); _erbout.concat "\n"
+_erbout.concat "\t";  if ship.robof && ship.robof > 0   ; _erbout.concat "\n"
+_erbout.concat "\t<span class=\"gray\">(\346\255\243\345\234\250"; _erbout.concat(( link_to ml.name({"uid" =>ship.robof}), :controller => :home , :action => :friend ,:id => ship.robof ).to_s); _erbout.concat "\347\232\204\345\262\233\344\270\212\347\203\247\346\235\200\346\212\242\346\216\240)</span><br>\n"
+_erbout.concat "     ";  if ship.robtime ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - ship.robtime,ship.capacity,ship.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+ end 
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "</form>\n"
+ if @mynotice ; _erbout.concat "\n"
+_erbout.concat "\t<div  id=\"noticelist\">\n"
+_erbout.concat "\t\t<hr />\n"
+_erbout.concat "\t\t<span id=\"piratenews\">\346\265\267\347\233\227\345\277\253\350\256\257  "; _erbout.concat(( link_to "查看更多",:controller => :notice ).to_s); _erbout.concat "</span>\n"
+_erbout.concat "\t\t";  if @mynotice.length ==0 ; _erbout.concat "\n"
+_erbout.concat "\t\t\t<br><span class=\"gray\">\346\232\202\346\227\240\344\277\241\346\201\257</span>\n"
+_erbout.concat "\t\t";  else ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t\t\t"; @mynotice.each do |n|; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t<div id=\"noticecontent\">"; _erbout.concat(( n.content ).to_s); _erbout.concat "</div><div id=\"noticetime\">"; _erbout.concat(( distance_of_time_in_words(Time.now,n.updated_at) ).to_s); _erbout.concat "</div><div style=\"clear:both;\"></div>\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div id=\"notify\">\n"
+_erbout.concat "<h4>\345\205\254\345\221\212</h4>\n"
+_erbout.concat "<ul>\n"
+_erbout.concat "<li>\344\270\215\344\274\232\347\216\251\357\274\237"; _erbout.concat(( link_to "查看帮助",:controller => :home,:action => :index ,:help =>"1" ).to_s); _erbout.concat "\n"
+_erbout.concat "</li>\n"
+_erbout.concat "</ul>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"friendlist\"  >\n"
+_erbout.concat "\n"
+_erbout.concat "<h4>\346\265\267\347\233\227\345\245\275\345\217\213</h4>\n"
+ @current_user.friend_ids.each do |friend| ; _erbout.concat "\n"
+_erbout.concat "<div>\n"
+_erbout.concat(( link_to ml.name({"uid" => friend}),:controller => :home,:action => :friend,:id => friend ).to_s); _erbout.concat "\n"
+_erbout.concat "</div>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "</div>"; _erbout
+end
+Backtrace: D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:241:in `compile_template'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:55:in `prepare!'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:34:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+D:/ruby/rails_apps/my/lpiratemy/app/controllers/home_controller.rb:19:in `friend'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ':', expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected '}', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ',', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ')', expecting kEND
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                            ^) on line #105 of home/index.html.erb:
+102:  <%= submit_tag "贸易" , :name => "dock" ,:value => "贸易" %>
+103: </form>
+104: <%= ml.mlelse %>
+105: <%= ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" },:id=>"myformb",:method => "POST") %>
+106: <%= ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) %>
+107: <%= ml.end_request_form %>
+108: 
+
+    app/views/home/index.html.erb:241:in `compile_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:55:in `prepare!'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:34:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:19:in `friend'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:19:06) [POST]
+  Session ID: cc07eaa75db8f6839495d6240c02bb69
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"7b1cfc40cb099c9aed6a81ae3fc672c0", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821959", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014cc70018d6a8d93c3f5852c15b42", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014cc70018d6a8d93c3f5852c15b42', `updated_at` = '2008-10-24 04:19:06' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+ERROR: compiling _run_erb_47app47views47home47index46html46erb RAISED compile error
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ':', expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ',', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ',', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected '}', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                   ^
+Function body: def _run_erb_47app47views47home47index46html46erb(local_assigns)
+_erbout = '';  ml = Ml.new ; _erbout.concat "\n"
+_erbout.concat "<style type=\"text/css\">\n"
+_erbout.concat "#mybody {\n"
+_erbout.concat "\twidth: 620px;\n"
+_erbout.concat "\tfloat:left;\n"
+_erbout.concat "\tpadding: 5px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#docklist{\n"
+_erbout.concat "}\n"
+_erbout.concat "#roblist{\n"
+_erbout.concat "}\n"
+_erbout.concat ".dock {\n"
+_erbout.concat "\tfloat: left;\n"
+_erbout.concat "\twidth:155px;\n"
+_erbout.concat "\ttext-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat "#friendlist {\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "width:160px;\n"
+_erbout.concat "height:300px;\n"
+_erbout.concat "overflow:auto;\n"
+_erbout.concat "}\n"
+_erbout.concat "\n"
+_erbout.concat "#islandinfo{\n"
+_erbout.concat "\tcolor:red;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat "#piratenews{\n"
+_erbout.concat "\tcolor:green;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticeone {\n"
+_erbout.concat "height:25px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticecontent {\n"
+_erbout.concat "float:left;\n"
+_erbout.concat "height:28px;\n"
+_erbout.concat "width:500px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#myshipspan{\n"
+_erbout.concat "\tcolor:blue;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat ".ship{\n"
+_erbout.concat "float:left;\n"
+_erbout.concat "width:180px;\n"
+_erbout.concat "text-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat "\n"
+_erbout.concat "h4 {\n"
+_erbout.concat "text-align:center;height:25px;background:#D8DFEA none repeat scroll 0%;\n"
+_erbout.concat "border-top:1px solid #3B5888;font-size:14px;font-weight:bold;line-height:25px;font-weight:bold;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gray{\n"
+_erbout.concat "color: #666666;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gotofriend{\n"
+_erbout.concat "color:#0000ff;\n"
+_erbout.concat "text-align:right;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticetime {\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "}\n"
+_erbout.concat "#notify\n"
+_erbout.concat "{\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "width:160px;\n"
+_erbout.concat "height:100px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#business_dock\n"
+_erbout.concat "{\n"
+_erbout.concat "border:2px solid #225599;\n"
+_erbout.concat "float: left;\n"
+_erbout.concat "width:151px;\n"
+_erbout.concat "text-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gorob{\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "text-size:15px;\n"
+_erbout.concat "}\n"
+_erbout.concat "</style>\n"
+_erbout.concat "\n"
+_erbout.concat "<div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"mybody\">\n"
+_erbout.concat "<div class=\"gotofriend\"></div>\n"
+_erbout.concat "<div id=\"islandinfo\">"; _erbout.concat(( ml.userpic("uid" => @user.xid,"linked"=>"true") ).to_s); _erbout.concat(( ml.name("uid"=>@user.xid)).to_s); _erbout.concat "\347\232\204\345\260\217\345\262\233<span class=\"gorob\">"; _erbout.concat(( link_to ">>去抢劫好友",:controller => :home ,:action => :friend  ).to_s); _erbout.concat "</span><br>\n"
+_erbout.concat "<hr /></div>\n"
+_erbout.concat "<div id=\"docklist\">\n"
+_erbout.concat "<div id=\"dock1\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"dock2\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"dock3\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"business_dock\" >"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\350\264\270\346\230\223\347\240\201\345\244\264<br>\n"
+_erbout.concat "&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock4 == nil or @user.dock4 == 0) and @current_user.xid != @user.xid
+_erbout.concat(( ml.if_is_app_user({"uid" => @user.xid}) ).to_s); _erbout.concat " \n"
+_erbout.concat "<form action=\"/1007758/business/business/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\"> \n"
+_erbout.concat " "; _erbout.concat(( submit_tag "贸易" , :name => "dock" ,:value => "贸易" ).to_s); _erbout.concat "\n"
+_erbout.concat "</form>\n"
+_erbout.concat(( ml.mlelse ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.end_request_form ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat(( ml.end_mlelse ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.end_if_is_app_user ).to_s); _erbout.concat " \n"
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t \n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock4 and @user.dock4 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t</div>\n"
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<form action=\"/1007758/home/rob/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\">\n"
+_erbout.concat "<div id=\"roblist\">\n"
+_erbout.concat "\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock1 == nil or @user.dock1 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头1" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock1 and @user.dock1 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock1) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t \345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock1_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201\n"
+_erbout.concat "\t\t\t\t ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头1" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t  ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock2 == nil or @user.dock2 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头2" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock2 and @user.dock2 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock2) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t ";  if @user.dock2_time ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock2_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头2" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock3 == nil or @user.dock3 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头3" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock3 and @user.dock3 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock3) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t ";  if @user.dock3_time ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock3_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头3" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div id=\"shiplist\">\n"
+_erbout.concat "<hr />\n"
+_erbout.concat "<span id=\"myshipspan\">\346\210\221\347\232\204\350\210\271\345\217\252</span><br>\n"
+ @current_user.usership.each do |ship|  
+_erbout.concat "\t<div class=\"ship\">\n"
+_erbout.concat "    \n"
+_erbout.concat "\t"; _erbout.concat(( usershipimg(ship)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t"; _erbout.concat(( radio_button  "usership","id", ship.id , :checked => "checked" ).to_s); _erbout.concat " "; _erbout.concat(( ship.name ).to_s); _erbout.concat "\n"
+_erbout.concat "\t";  if ship.robof && ship.robof > 0   ; _erbout.concat "\n"
+_erbout.concat "\t<span class=\"gray\">(\346\255\243\345\234\250"; _erbout.concat(( link_to ml.name({"uid" =>ship.robof}), :controller => :home , :action => :friend ,:id => ship.robof ).to_s); _erbout.concat "\347\232\204\345\262\233\344\270\212\347\203\247\346\235\200\346\212\242\346\216\240)</span><br>\n"
+_erbout.concat "     ";  if ship.robtime ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - ship.robtime,ship.capacity,ship.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+ end 
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "</form>\n"
+ if @mynotice ; _erbout.concat "\n"
+_erbout.concat "\t<div  id=\"noticelist\">\n"
+_erbout.concat "\t\t<hr />\n"
+_erbout.concat "\t\t<span id=\"piratenews\">\346\265\267\347\233\227\345\277\253\350\256\257  "; _erbout.concat(( link_to "查看更多",:controller => :notice ).to_s); _erbout.concat "</span>\n"
+_erbout.concat "\t\t";  if @mynotice.length ==0 ; _erbout.concat "\n"
+_erbout.concat "\t\t\t<br><span class=\"gray\">\346\232\202\346\227\240\344\277\241\346\201\257</span>\n"
+_erbout.concat "\t\t";  else ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t\t\t"; @mynotice.each do |n|; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t<div id=\"noticecontent\">"; _erbout.concat(( n.content ).to_s); _erbout.concat "</div><div id=\"noticetime\">"; _erbout.concat(( distance_of_time_in_words(Time.now,n.updated_at) ).to_s); _erbout.concat "</div><div style=\"clear:both;\"></div>\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div id=\"notify\">\n"
+_erbout.concat "<h4>\345\205\254\345\221\212</h4>\n"
+_erbout.concat "<ul>\n"
+_erbout.concat "<li>\344\270\215\344\274\232\347\216\251\357\274\237"; _erbout.concat(( link_to "查看帮助",:controller => :home,:action => :index ,:help =>"1" ).to_s); _erbout.concat "\n"
+_erbout.concat "</li>\n"
+_erbout.concat "</ul>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"friendlist\"  >\n"
+_erbout.concat "\n"
+_erbout.concat "<h4>\346\265\267\347\233\227\345\245\275\345\217\213</h4>\n"
+ @current_user.friend_ids.each do |friend| ; _erbout.concat "\n"
+_erbout.concat "<div>\n"
+_erbout.concat(( link_to ml.name({"uid" => friend}),:controller => :home,:action => :friend,:id => friend ).to_s); _erbout.concat "\n"
+_erbout.concat "</div>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "</div>"; _erbout
+end
+Backtrace: D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:241:in `compile_template'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:55:in `prepare!'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:34:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+D:/ruby/rails_apps/my/lpiratemy/app/controllers/home_controller.rb:19:in `friend'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ':', expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ',', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected ',', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected '}', expecting ')'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                   ^) on line #105 of home/index.html.erb:
+102:  <%= submit_tag "贸易" , :name => "dock" ,:value => "贸易" %>
+103: </form>
+104: <%= ml.mlelse %>
+105: <%= ml.request_form({:type => "海盗时代",:action => "/1007758/business/invite/#{@user.id}",:invite => "true" ,: content =>"邀请你一起来做海盗<my:req-choice url='' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) %>
+106: <%= ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) %>
+107: <%= ml.end_request_form %>
+108: 
+
+    app/views/home/index.html.erb:241:in `compile_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:55:in `prepare!'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:34:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:19:in `friend'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:19:18) [POST]
+  Session ID: 994df44edeacc82b4e40db60e5ea2cb5
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"2e2349457d0dffe9a275fb09c5812886", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821971", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014cd30018d6a89003b0fbeb11fc85", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014cd30018d6a89003b0fbeb11fc85', `updated_at` = '2008-10-24 04:19:18' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.062000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.25000 (4 reqs/sec) | Rendering: 0.12500 (50%) | DB: 0.09300 (37%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:19:37) [POST]
+  Session ID: 3a357deb6a297804ff65ec9d1c4a5eea
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"3f9d6139f7bc6888a612745ca0aac9d6", "my_sig_v"=>"0.1", "my_sig_time"=>"1224821990", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014ce60018d6a8782a2c242fb6772b", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.015000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014ce60018d6a8782a2c242fb6772b', `updated_at` = '2008-10-24 04:19:37' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.016000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.016000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.23400 (4 reqs/sec) | Rendering: 0.10800 (46%) | DB: 0.07800 (33%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:20:53) [POST]
+  Session ID: a187bd43872ff0624c29e0b7f2b6b387
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"4b50b94292bfc7c8eecddb48eb58bc73", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822061", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014d2d0018d6a87e58552f421802a9", "my_sig_in_canvas"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014d2d0018d6a87e58552f421802a9', `updated_at` = '2008-10-24 04:20:54' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.23500 (4 reqs/sec) | Rendering: 0.11000 (46%) | DB: 0.07900 (33%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:21:08) [POST]
+  Session ID: 7af65312b9f8782f68f78218efc9cd5b
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"daa3fb5abc3c2d6938108105b8669944", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822081", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014d410018d6a89fdb38bad4c093f8", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014d410018d6a89fdb38bad4c093f8', `updated_at` = '2008-10-24 04:21:08' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.016000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.21900 (4 reqs/sec) | Rendering: 0.10900 (49%) | DB: 0.07800 (35%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-10-24 12:21:21) [POST]
+  Session ID: d9a1bfd558e471c3d499906c801d31d2
+  Parameters: {"my_sig_key"=>"d752f89c9f74a7278509e4707692e03e", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822094", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014d4e0018d6a8627a293df9e816d8", "my_sig_in_canvas"=>"1"}
+
+
+ActionController::RoutingError (No route matches "/1007758/business/invite/44" with {:method=>:post}):
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:21:54) [POST]
+  Session ID: 2f74ccf3de74a460f3f2443b1e6ae0b6
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"b3538625ab6ba4c4798e74d0a7ddea75", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822127", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591478", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014d6f0018d6a89b06a630e3a1f852", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014d6f0018d6a89b06a630e3a1f852', `updated_at` = '2008-10-24 04:21:54' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.094000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591478' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.29700 (3 reqs/sec) | Rendering: 0.12600 (42%) | DB: 0.12400 (41%) | 200 OK [http://61.172.255.117/home/friend/1591478?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:21:59) [POST]
+  Session ID: 53d3fe6fc9d9f91f84346e7f5a7dc52b
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"d7669e9c7fde8416d71917288cc041c2", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822132", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591816", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014d740018d6a87f45f786259f2350", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014d740018d6a87f45f786259f2350', `updated_at` = '2008-10-24 04:22:00' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.046000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1591816' ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000000)[0m   [0mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-24 04:22:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '1591816', 0, NULL, '2008-10-24 04:22:00')[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUsership Columns (0.000000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUsership Create (0.000000)[0m   [0mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-24 04:22:00', 1, 200, 10, 1000, 45, '2008-10-24 04:22:00', NULL)[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.26600 (3 reqs/sec) | Rendering: 0.01600 (6%) | DB: 0.14000 (52%) | 200 OK [http://61.172.255.117/home/friend/1591816?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:22:04) [POST]
+  Session ID: db6b853da3193758ed8f225178c27941
+  Parameters: {"my_sig_key"=>"6869609cd40966d123182d2ee1302540", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822137", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"45", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014d790018d6a8e3bf0656032b7cc1", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014d790018d6a8e3bf0656032b7cc1', `updated_at` = '2008-10-24 04:22:04' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.gsub):
+    D:/ruby/ruby/lib/ruby/1.8/uri/common.rb:289:in `escape'
+    /app/controllers/application.rb:77:in `xn_redirect_to'
+    /app/controllers/application.rb:76:in `each'
+    /app/controllers/application.rb:76:in `xn_redirect_to'
+    /app/controllers/business_controller.rb:71:in `invite'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:23:45) [POST]
+  Session ID: c0bcdab46fed3b534a45a37d3c4ec261
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"7e4b322ec34efc39406c4665a763ad96", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822238", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"1591816", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014dde0018d6a84981d72771dc526b", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.015000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014dde0018d6a84981d72771dc526b', `updated_at` = '2008-10-24 04:23:45' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591816' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.12500 (61%) | DB: 0.06200 (30%) | 200 OK [http://61.172.255.117/home/friend/1591816?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:23:50) [POST]
+  Session ID: 8db2d681efce92bee042056178e2d183
+  Parameters: {"my_sig_key"=>"e4f1865b401541d32bdf3492e697de4b", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822243", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"45", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014de30018d6a8c4b48796a36f562a", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014de30018d6a8c4b48796a36f562a', `updated_at` = '2008-10-24 04:23:50' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04600 (58%) | 200 OK [http://61.172.255.117/business/invite/45]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:23:52) [POST]
+  Session ID: 6261524ff06ea9d124f1c0d794c25283
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"1cb2a0ef37c781481405318db1592d05", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822245", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014de50018d6a8a7af9da4f047a82b", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014de50018d6a8a7af9da4f047a82b', `updated_at` = '2008-10-24 04:23:52' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1591494' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.09400 (46%) | DB: 0.07800 (38%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:24:01) [POST]
+  Session ID: a46fb660314fbce5b08702e24948ac63
+  Parameters: {"my_sig_key"=>"1da6a85b492ba9837a6b3e3167f64f25", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822253", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"27", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014ded0018d6a864b59c3c771b6d03", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.015000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014ded0018d6a864b59c3c771b6d03', `updated_at` = '2008-10-24 04:24:01' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+Completed in 0.07900 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (59%) | 200 OK [http://61.172.255.117/business/invite/27]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:24:03) [POST]
+  Session ID: 80f679b763a02f07dc46c43963787a9e
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"dc3631369e9c5ffae260d1f4579aa663", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822256", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014df00018d6a85f00b56d446e0b2b", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014df00018d6a85f00b56d446e0b2b', `updated_at` = '2008-10-24 04:24:03' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1670869' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.10900 (53%) | DB: 0.06300 (31%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:24:11) [POST]
+  Session ID: a34e59cf789c07364bd7d06acae25513
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"a7343b02c437db02f268ebb466ad1b9d", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822264", "action"=>"friend", "my_sig_appId"=>"1007725", "id"=>"41586805", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014df80018d6a83e718abcf73b18d0", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014df80018d6a83e718abcf73b18d0', `updated_at` = '2008-10-24 04:24:11' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '41586805' ) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.000000)[0m   [0mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-24 04:24:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '41586805', 0, NULL, '2008-10-24 04:24:11')[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUsership Columns (0.015000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUsership Create (0.000000)[0m   [0mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-24 04:24:11', 1, 200, 10, 1000, 46, '2008-10-24 04:24:11', NULL)[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.28100 (3 reqs/sec) | Rendering: 0.03100 (11%) | DB: 0.12500 (44%) | 200 OK [http://61.172.255.117/home/friend/41586805?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:24:17) [POST]
+  Session ID: 54701bff685811d60eb72cb9a4f7e895
+  Parameters: {"my_sig_key"=>"8f805cfadb302f659bfea3f718e056a8", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822270", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"46", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014dfe0018d6a88ba53493ffa6708e", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014dfe0018d6a88ba53493ffa6708e', `updated_at` = '2008-10-24 04:24:17' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (60%) | 200 OK [http://61.172.255.117/business/invite/46]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:24:19) [POST]
+  Session ID: 9c32e8e2f0d2f204a8f09dfb894c7f67
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"4b3d24263b0eaceb4c76165fdf796719", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822272", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014e000018d6a8a9159c542b52726a", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014e000018d6a8a9159c542b52726a', `updated_at` = '2008-10-24 04:24:19' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1670869' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.37500 (2 reqs/sec) | Rendering: 0.10900 (29%) | DB: 0.07700 (20%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:26:02) [POST]
+  Session ID: 063fea2f45b8c1b20a5af8ec91d32cb6
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"239a177a0200637158fab67f68006cfe", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822375", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014e670018d6a86162e595a7e66988", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014e670018d6a86162e595a7e66988', `updated_at` = '2008-10-24 04:26:02' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1626444' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.000000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.21900 (4 reqs/sec) | Rendering: 0.10900 (49%) | DB: 0.06300 (28%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:26:06) [POST]
+  Session ID: 0d99c18e192b888b63ff831ea81de0a5
+  Parameters: {"my_sig_key"=>"215530fcf6540e65215fc9c107d0159c", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822380", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"35", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014e6c0018d6a8a6ae8bf3c60bc72c", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014e6c0018d6a8a6ae8bf3c60bc72c', `updated_at` = '2008-10-24 04:26:07' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+Completed in 0.21900 (4 reqs/sec) | Rendering: 0.01600 (7%) | DB: 0.04700 (21%) | 200 OK [http://61.172.255.117/business/invite/35]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:26:08) [POST]
+  Session ID: f6525f43541d25cae7d7187ced83a062
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"26395fa8cdbb9d23e27aacb0266bcaa1", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822381", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014e6d0018d6a873c25ea5d483a2ba", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014e6d0018d6a873c25ea5d483a2ba', `updated_at` = '2008-10-24 04:26:08' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.094000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1595454' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.000000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.28100 (3 reqs/sec) | Rendering: 0.14000 (49%) | DB: 0.09400 (33%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:28:24) [POST]
+  Session ID: dd147b1dd5b0035e71a7ffd9e3a6b292
+  Parameters: {"my_sig_key"=>"fd723291d126912dae49ddbddb888964", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822517", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"31", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014ef50018d6a8a8c80b21d38ad432", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.016000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014ef50018d6a8a8c80b21d38ad432', `updated_at` = '2008-10-24 04:28:24' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.015000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '3' ) [0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (39%) | 200 OK [http://61.172.255.117/business/invite/31]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:28:26) [POST]
+  Session ID: e3470bff9d2af5d261e471ba29f1d80d
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"86d22dd32add69f2a3b5abe931102c30", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822519", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014ef70018d6a849e74613a8fb7637", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014ef70018d6a849e74613a8fb7637', `updated_at` = '2008-10-24 04:28:26' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '45312736' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-24 04:28:26', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '45312736', 0, NULL, '2008-10-24 04:28:26')[0m
+  [4;35;1mSQL (0.078000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.015000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-24 04:28:26', 1, 200, 10, 1000, 47, '2008-10-24 04:28:26', NULL)[0m
+  [4;35;1mSQL (0.094000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.40700 (2 reqs/sec) | Rendering: 0.01600 (3%) | DB: 0.26600 (65%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:28:34) [POST]
+  Session ID: 1239c41184930b8d47838b83dee79cde
+  Parameters: {"my_sig_key"=>"6a719f0450cdd1fedeb6c900c1877ebc", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822527", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"47", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014eff0018d6a8309d60d0c857ceac", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014eff0018d6a8309d60d0c857ceac', `updated_at` = '2008-10-24 04:28:34' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.016000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '4' ) [0m
+Completed in 0.07900 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03200 (40%) | 200 OK [http://61.172.255.117/business/invite/47]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:28:36) [POST]
+  Session ID: d8be38805007d74d8e9da269c8c9e222
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"32d5eda3a6cc41d71eac3d08078a98e6", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822529", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014f010018d6a816797c79fb7ea1ca", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014f010018d6a816797c79fb7ea1ca', `updated_at` = '2008-10-24 04:28:36' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1626444' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.32800 (3 reqs/sec) | Rendering: 0.15600 (47%) | DB: 0.04700 (14%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:29:16) [POST]
+  Session ID: 40a736b4af8bc0165e40b35094241b06
+  Parameters: {"my_sig_key"=>"75de1e5a9f3248f36c3459c85554cc1f", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822569", "action"=>"invite", "my_sig_appId"=>"1007725", "id"=>"35", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014f290018d6a8ddcf50acc1e4ca1e", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014f290018d6a8ddcf50acc1e4ca1e', `updated_at` = '2008-10-24 04:29:16' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04600 (58%) | 200 OK [http://61.172.255.117/business/invite/35]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:29:18) [POST]
+  Session ID: d55c88208125cf138cf128a940d24a30
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"6645773ecd09b2bd049521db16c232d4", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822571", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014f2b0018d6a8ba9698a6b2b53143", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014f2b0018d6a8ba9698a6b2b53143', `updated_at` = '2008-10-24 04:29:18' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '45312736' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.21800 (4 reqs/sec) | Rendering: 0.10900 (50%) | DB: 0.04800 (22%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing BusinessController#invite (for 127.0.0.1 at 2008-10-24 12:30:48) [POST]
+  Session ID: 86395bf2d1ddde7954be4112bff68973
+  Parameters: {"my_sig_key"=>"d40ff5a85efaad860b6dfad73a3c60a9", "ids"=>"47", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822661", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014f850018d6a8db6bdbede1676add", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014f850018d6a8db6bdbede1676add', `updated_at` = '2008-10-24 04:30:48' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.078000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '4' ) [0m
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.09400 (66%) | 200 OK [http://61.172.255.117/business/invite?ids=47]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:30:50) [POST]
+  Session ID: c99a9c830c75dee1a8dec50c8f4963c9
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"1fadc783caf8ed6adf50928d0af54065", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822663", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014f870018d6a8fd5a3b5a9561f82d", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014f870018d6a8fd5a3b5a9561f82d', `updated_at` = '2008-10-24 04:30:50' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1626444' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.000000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.015000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.09400 (46%) | DB: 0.07800 (38%) | 200 OK [http://61.172.255.117/home/friend/?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-24 12:31:27) [POST]
+  Session ID: df0dbb5e23e094c69d40be9681f1a164
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"be172e853be7af25c4b76c398797cbd5", "my_sig_v"=>"0.1", "my_sig_time"=>"1224822701", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491", "my_sig_sessionId"=>"49014fad0018d6a8568a61ebc27e3349", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n', `session_key` = '49014fad0018d6a8568a61ebc27e3349', `updated_at` = '2008-10-24 04:31:28' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1960366' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.31300 (3 reqs/sec) | Rendering: 0.09500 (30%) | DB: 0.06100 (19%) | 200 OK [http://61.172.255.117/home/friend?&my_extra=]

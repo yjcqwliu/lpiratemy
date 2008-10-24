@@ -33,9 +33,8 @@ class BusinessController < ApplicationController
 	
 	def invite 
 	     ids = params[:ids]
-		
-	     if ids and ids.length >0
-		    ids = ids.first
+	 	 pp("--------------ids:#{ids.inspect}---------------")
+	     if ids 
 		    @user = User.find(:all,
 			                  :conditions => [" xid = ? ",ids.to_s]
 							  )
