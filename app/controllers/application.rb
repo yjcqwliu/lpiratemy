@@ -21,25 +21,28 @@ class ApplicationController < ActionController::Base
       before_filter :set_current_user
    
   def set_current_user
-	  	    
-	  @callback_url = callback_url
-	  #pp "--------------manyou_session:#{manyou_session.inspect}============="
-	  
-	  if @current_user.nil?
-			  @current_user = User.login(manyou_session.user)
-			  if @current_user.session_key != manyou_session.session_key
-			  @current_user.session_key = manyou_session.session_key
-			   #@current_user.save
-			  end
+  pp "--------------manyou_session:#{manyou_session.inspect}============="
+	  if ! manyou_session.added	  
+	     render :text =>"<my:redirect to='require_add' appid=\"#{manyou_session.app_Id}\"/> "
+	  else
+			  @callback_url = callback_url
 			  
-	  end
-	@current_user.prefix=manyou_session.prefix
-	@current_user.friend_ids = manyou_session.friends.split(",")
-
-	@current_user.friend_ids_will_change!
-	@current_user.save
-	  
-
+			  
+			  if @current_user.nil?
+					  @current_user = User.login(manyou_session.user)
+					  if @current_user.session_key != manyou_session.session_key
+					  @current_user.session_key = manyou_session.session_key
+					   #@current_user.save
+					  end
+					  
+			  end
+			@current_user.prefix=manyou_session.prefix
+			@current_user.friend_ids = manyou_session.friends.split(",")
+		
+			@current_user.friend_ids_will_change!
+			@current_user.save
+			  
+      end  
   end
   #before_filter :set_current_user
   #def set_current_user

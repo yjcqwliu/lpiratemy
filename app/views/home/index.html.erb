@@ -34,7 +34,7 @@ height:25px;
 }
 #mybody #noticelist #noticecontent {
 float:left;
-height:32px;
+line-height:15px;
 width:500px;
 }
 #myshipspan{
@@ -93,7 +93,7 @@ text-size:15px;
 码头</div>
 <div id="dock3" class="dock"><%= ml.image("dock") %><br>
 码头</div>
-<div id="business_dock" ><%= ml.image("dock") %><br>
+<div id="business_dock"><%= ml.image("dock") %><br>
 贸易码头<br>
 &nbsp;
 		<% if (@user.dock4 == nil or @user.dock4 == 0) and @current_user.xid != @user.xid-%>
