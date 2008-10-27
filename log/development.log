@@ -6258,3 +6258,455 @@ Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 15:59:34) [POST]
 Rendering template within layouts/application
 Rendering home/invite
 Completed in 0.12500 (8 reqs/sec) | Rendering: 0.01600 (12%) | DB: 0.07800 (62%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-27 16:05:35) [POST]
+  Session ID: 95caa28f145c4bcfce332cd3ba4e80b7
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"b1c719dcd10d6624aa6ff79d74dcacc9", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094751", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"4905765f0018d6a8df640028bfd25e37", "my_sig_in_canvas"=>"1"}
+  [4;36;1mSQL (0.016000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '4905765f0018d6a8df640028bfd25e37', `updated_at` = '2008-10-27 08:05:35' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.29700 (3 reqs/sec) | Rendering: 0.17200 (57%) | DB: 0.09400 (31%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:05:38) [POST]
+  Session ID: d03e0b8386655c3ec015ad5745697611
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"25ecdd2bc48342b42f82c897087563a6", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094754", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490576620018d6a82ee1c2f5583f384d", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490576620018d6a82ee1c2f5583f384d', `updated_at` = '2008-10-27 08:05:38' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.01600 (17%) | DB: 0.03100 (32%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:06:25) [POST]
+  Session ID: 772386fcac4d0996c13b1264a5a9a5de
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"d2ccf20dceddc3df435d232ba5a6d06f", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094801", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490576910018d6a81e53f45bda3c0af3", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490576910018d6a81e53f45bda3c0af3', `updated_at` = '2008-10-27 08:06:25' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.01500 (16%) | DB: 0.04700 (50%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:07:49) [POST]
+  Session ID: fe29d84a37873ede28cd586113178639
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"c93cfbe42601a0e8b88d5970812cd73c", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094885", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490576e50018d6a819bc74f2c76664a2", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490576e50018d6a819bc74f2c76664a2', `updated_at` = '2008-10-27 08:07:49' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.03100 (32%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:08:23) [POST]
+  Session ID: e29797be7220ad8cfb32cccdee52f730
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"8be5b48325454c42f8df2553559a26e1", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094919", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490577070018d6a84897f39207cd1e0b", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490577070018d6a84897f39207cd1e0b', `updated_at` = '2008-10-27 08:08:23' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.01600 (14%) | DB: 0.06300 (57%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:09:03) [POST]
+  Session ID: 21ea91f11a9759c82e04a433fefa1b51
+  Parameters: {"my_sig_key"=>"111865a32ca2ee52e441ba39f456c610", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094959", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"4905772f0018d6a8425ceac663c9bef6", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '4905772f0018d6a8425ceac663c9bef6', `updated_at` = '2008-10-27 08:09:03' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:09:03', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 08:09:03')[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.016000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:09:03', 1, 200, 10, 1000, 55, '2008-10-27 08:09:03', NULL)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.015000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 08:09:03' WHERE `id` = 55[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+Completed in 0.45300 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.20300 (44%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:09:04) [POST]
+  Session ID: d31c4a50a5e9ac5fcad992df7af34288
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"aa6de0068a69114f4ed027832216db48", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225094960", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490577300018d6a8b624866288dc15c8", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.015000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490577300018d6a8b624866288dc15c8', `updated_at` = '2008-10-27 08:09:04' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.04700 (43%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:12:37) [POST]
+  Session ID: 6bb0546f86fd99c1be89c7ede30f02a7
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"773e669cbfbc4806628f414f52c3ccd4", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095173", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490578050018d6a8f1a1ce6c3de755ec", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490578050018d6a8f1a1ce6c3de755ec', `updated_at` = '2008-10-27 08:12:37' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.109000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+
+
+ActionView::TemplateError (undefined method `perfix' for #<User:0x46303a4>) on line #15 of home/invite.html.erb:
+12: <strong>邀请</strong><br>
+13: <my:request-form method="POST" 
+14: type='海盗时代' invite="true" 
+15: content="很好玩的海盗游戏哦<my:req-choice url='<%= @current_user.perfix %>userapp.php?id=1007758&my_suffix=<%= urlencode(Base64.encode64('userapp.php?id=1007758')) %>' label='我愿意'>"  
+16: id="myformb" invite="true" action="home/invite">
+17: <my:multi-friend-selector actiontext="邀请好友加海盗时代" showborder="false" rows="4" max="50">
+18: </my:request-form>
+
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    app/views/home/invite.html.erb:15:in `_run_erb_47app47views47home47invite46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1161:in `default_render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:13:07) [POST]
+  Session ID: a5e89626c9d9954f54301e5734a9f636
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"c3812594d1ea78b6a222e42b59425bf3", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095202", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490578220018d6a86d53627b644d0b72", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490578220018d6a86d53627b644d0b72', `updated_at` = '2008-10-27 08:13:07' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+
+
+ActionView::TemplateError (undefined method `urlencode' for #<ActionView::Base:0x487d8a0>) on line #15 of home/invite.html.erb:
+12: <strong>邀请</strong><br>
+13: <my:request-form method="POST" 
+14: type='海盗时代' invite="true" 
+15: content="很好玩的海盗游戏哦<my:req-choice url='<%= @current_user.prefix %>userapp.php?id=1007758&my_suffix=<%= urlencode(Base64.encode64('userapp.php?id=1007758')) %>' label='我愿意'>"  
+16: id="myformb" invite="true" action="home/invite">
+17: <my:multi-friend-selector actiontext="邀请好友加海盗时代" showborder="false" rows="4" max="50">
+18: </my:request-form>
+
+    app/views/home/invite.html.erb:15:in `_run_erb_47app47views47home47invite46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1161:in `default_render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:13:53) [POST]
+  Session ID: e02ce59a5f481f5a34d474a6a3bc8a55
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"91b518b9baececff244d621b38467d05", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095249", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490578510018d6a834bebf3c0136aeba", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490578510018d6a834bebf3c0136aeba', `updated_at` = '2008-10-27 08:13:53' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.03100 (28%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:14:17) [POST]
+  Session ID: 52881685d251c9f7f0e7bfee888eceda
+  Parameters: {"my_sig_key"=>"27f47a8a790d9fc449912b7b144958bd", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095273", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490578690018d6a81a303309637186ff", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490578690018d6a81a303309637186ff', `updated_at` = '2008-10-27 08:14:17' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:14:17', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 08:14:17')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.016000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.031000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:14:17', 1, 200, 10, 1000, 56, '2008-10-27 08:14:17', NULL)[0m
+  [4;35;1mSQL (0.094000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 08:14:17' WHERE `id` = 56[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+Completed in 0.42200 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.28200 (66%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:14:18) [POST]
+  Session ID: 386c0ff300c92fea8159615670393f96
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"093f002bf5fed7b628c670a6ce8f2a3f", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095274", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"4905786a0018d6a84fdfb446d6cf669a", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.016000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '4905786a0018d6a84fdfb446d6cf669a', `updated_at` = '2008-10-27 08:14:18' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.07900 (72%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:16:40) [POST]
+  Session ID: 0404845ac4d59f0b01908dbf1d0ba8a9
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"6ce88747dbc78d52ed26129938968dec", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095416", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490578f80018d6a8abdbe5ef6b836424", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490578f80018d6a8abdbe5ef6b836424', `updated_at` = '2008-10-27 08:16:40' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.046000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.01600 (12%) | DB: 0.04600 (36%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:16:47) [POST]
+  Session ID: ab73f48e1535b8120fd3ae15b2bde64e
+  Parameters: {"my_sig_key"=>"570f67423005556fa770bc8bcaf5f065", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095423", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490578ff0018d6a8eb37b5b53bd6f566", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490578ff0018d6a8eb37b5b53bd6f566', `updated_at` = '2008-10-27 08:16:47' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:16:47', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 08:16:47')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:16:47', 1, 200, 10, 1000, 57, '2008-10-27 08:16:47', NULL)[0m
+  [4;35;1mSQL (0.109000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 08:16:47' WHERE `id` = 57[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+Completed in 0.40600 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.21800 (53%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:16:48) [POST]
+  Session ID: ca927c33d446e65f1d061214a3d47a42
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"593c957175d8314763d6babc1fdf472c", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095424", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490579000018d6a8b95e6ac6a4e237bc", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490579000018d6a8b95e6ac6a4e237bc', `updated_at` = '2008-10-27 08:16:48' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.046000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.06200 (56%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:19:18) [POST]
+  Session ID: 48c9fbac2f47be5f02cdfb1326a84f30
+  Parameters: {"my_sig_key"=>"f8e93d7c4c1ec47cb8e88f126c35a596", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095574", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490579960018d6a8cc16fb6d27c541cb", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490579960018d6a8cc16fb6d27c541cb', `updated_at` = '2008-10-27 08:19:18' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:19:18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 08:19:18')[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:19:18', 1, 200, 10, 1000, 58, '2008-10-27 08:19:18', NULL)[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 08:19:18' WHERE `id` = 58[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+Completed in 0.34400 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.22000 (63%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:19:20) [POST]
+  Session ID: c4482377186e59c54bb5252417133b88
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"6e5fa0726bf0e0f486a214c7f0e78d99", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095575", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"490579970018d6a8d12f14e461d8f8d2", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '490579970018d6a8d12f14e461d8f8d2', `updated_at` = '2008-10-27 08:19:20' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.06300 (67%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]

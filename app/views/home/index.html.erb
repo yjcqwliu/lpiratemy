@@ -102,7 +102,7 @@ text-size:15px;
  <%= submit_tag "贸易" , :name => "dock" ,:value => "贸易" %>
 </form>
 <%= ml.mlelse %>
-<%= ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海盗<my:req-choice url='#{@current_user.perfix}userapp.php?id=1007758&my_suffix=#{urlencode(Base64.encode64('userapp.php?id=1007758'))}' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) %>
+<%= ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{Base64.encode64('userapp.php?id=1007758')",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) %>
 <%= ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) %>
 <%= ml.end_request_form %>
 
