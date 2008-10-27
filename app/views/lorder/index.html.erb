@@ -65,7 +65,7 @@ color:blue;
     
 	<%= usershipimg(ship)%><br>
 	<%= ship.name %>
-	<% if ship.robof && ship.robof > '0'   %>
+	<% if ship.robof && ship.robof.to_s > '0'   %>
 	<span class="gray">(正在<%= link_to ml.name({"uid" => ship.robof,"linked" => "false"}), :controller => :home , :action => :friend ,:id => ship.robof %>的岛上烧杀抢掠)</span><br>
      <% if ship.robtime %>已经掠夺了<%= conversion(Time.now - ship.robtime,ship.capacity,ship.robspeed).to_i %>个金币<% end %>
 	<% end %>
