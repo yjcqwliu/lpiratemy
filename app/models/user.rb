@@ -66,6 +66,6 @@ class User < ActiveRecord::Base
 		@newship.save
 	end
 	 def xn_session
-    @xn_session ||= Xiaonei::Session.new("xn_sig_session_key" => session_key, "xn_sig_user" => xid)
+    @xn_session ||= Rmanyou::Session.new("my_sig_sessionId" => session_key, "my_sig_uId" => xid)
   end
 end

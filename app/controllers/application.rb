@@ -16,43 +16,29 @@ class ApplicationController < ActionController::Base
   #platform = "manyou"
      
   #require  "platform/#{platform}.rb"
-  #acts_as_manyou_controller
+  require_login
   
       before_filter :set_current_user
    
   def set_current_user
 	  	    
 	  @callback_url = callback_url
+	  pp "--------------manyou_session:#{manyou_session.invoke_method('manyou.geturl').inspect}============="
 	  
-	  
-	  if params[:controller] != "ships" and params[:controller] != "myapi" then
-			if @current_user.nil?
-			  @current_user = User.login(params[:my_sig_uId])
-			  if @current_user.session_key != params[:my_sig_sessionId]
-			  @current_user.session_key = params[:my_sig_sessionId]
+	  if @current_user.nil?
+			  @current_user = User.login(manyou_session.user)
+			  if @current_user.session_key != manyou_session.session_key
+			  @current_user.session_key = manyou_session.session_key
 			   #@current_user.save
 			  end
 			  
 			end
-			
-			
-				  @current_user.friend_ids = params[:my_sig_friends].split(',')
-				
-			pp("-----------@current_user.friend_ids:#{@current_user.friend_ids}---------")
 
-			init #登陆游戏时的一些数据初始化 
-			
+			@current_user.friend_ids = manyou_session.friends.split(",")
+
 			@current_user.friend_ids_will_change!
 			@current_user.save
-	   else
-	     #pp("-----cookie:#{cookies[:admin]}---")
-		 @admin = cookies[:admin]
-		 if !@admin or @admin == ""  then
-			 @admin = params[:admin]
-			 cookies[:admin] = @admin 
-		 end 
-	   end
-	
+	  
 
   end
   #before_filter :set_current_user
