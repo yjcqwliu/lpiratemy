@@ -6710,3 +6710,850 @@ Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:19:20) [POST]
 Rendering template within layouts/application
 Rendering home/invite
 Completed in 0.09400 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.06300 (67%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:22:21) [POST]
+  Session ID: 24c5cf44c86416199b91ae074d61535c
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"991dc5b762be935306634a06900370cd", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095758", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49057a4e0018d6a83b09ec7e6a6f5812", "my_sig_in_canvas"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49057a4e0018d6a83b09ec7e6a6f5812', `updated_at` = '2008-10-27 08:22:22' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01500 (13%) | DB: 0.04700 (43%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:22:28) [POST]
+  Session ID: 3b510caee3ead51fbf701cbd4a03a360
+  Parameters: {"my_sig_key"=>"97fb8025efd3ff49eadc0703fc72f6e0", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095764", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49057a540018d6a8ff93c8d36e650d5d", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49057a540018d6a8ff93c8d36e650d5d', `updated_at` = '2008-10-27 08:22:28' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:22:28', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 08:22:28')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.016000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:22:28', 1, 200, 10, 1000, 59, '2008-10-27 08:22:28', NULL)[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 08:22:28' WHERE `id` = 59[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+Completed in 0.32800 (3 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.15600 (47%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:22:30) [POST]
+  Session ID: 4af39b098b95470d4a3e45612c53c4a9
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"f7c6afb724db5f7f403f80b0d6158edc", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225095766", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49057a560018d6a8b054ace1a5c1ee2d", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49057a560018d6a8b054ace1a5c1ee2d', `updated_at` = '2008-10-27 08:22:30' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.04700 (50%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:27:20) [POST]
+  Session ID: 7e30f903512968f84802a54456c07064
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"5219d1aa6648f80643d62165a0505ba8", "my_sig_v"=>"0.1", "my_sig_time"=>"1225096056", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49057b780018d6a844efc06fd705fe09", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49057b780018d6a844efc06fd705fe09', `updated_at` = '2008-10-27 08:27:20' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.062000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.01500 (9%) | DB: 0.07800 (50%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:27:25) [POST]
+  Session ID: 317358a1320c2c381cd68972099e1828
+  Parameters: {"my_sig_key"=>"0208b8d989a09daa5d2dbec411ae11ad", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225096061", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49057b7d0018d6a86555a939fdfc2d7e", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49057b7d0018d6a86555a939fdfc2d7e', `updated_at` = '2008-10-27 08:27:25' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.062000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:27:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 08:27:25')[0m
+  [4;35;1mSQL (0.063000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.016000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:27:25', 1, 200, 10, 1000, 60, '2008-10-27 08:27:25', NULL)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.015000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 08:27:25' WHERE `id` = 60[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mCOMMIT[0m
+Completed in 0.39100 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.23500 (60%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 16:27:26) [POST]
+  Session ID: 0b0b65c6532fa107dc7ee5a9f567441d
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"6fee1a9ee17ad94240824f9740424f6e", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225096062", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49057b7e0018d6a8adb93741b3ebaada", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49057b7e0018d6a8adb93741b3ebaada', `updated_at` = '2008-10-27 08:27:26' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.23500 (4 reqs/sec) | Rendering: 0.01600 (6%) | DB: 0.04700 (19%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-10-27 16:27:35) [POST]
+  Session ID: 377b6d4176ab8b004e47c0aa3a708faf
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"bd382e447a21096526d5a1db6c816c1c", "my_sig_v"=>"0.1", "my_sig_time"=>"1225096071", "my_sig_appId"=>"1007725", "id"=>"1007758", "my_sig_sId"=>"100", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"121149113", "my_sig_added"=>"0", "my_sig_friends"=>"1627816", "my_sig_sessionId"=>"49057b87073896b967b07727c59beb3b", "my_sig_in_canvas"=>"1"}
+
+
+ActionController::RoutingError (No route matches "/userapp.php" with {:method=>:post}):
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-27 16:27:46) [POST]
+  Session ID: 99b24f22831d5cf6e3904092b35372d6
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"351067aee54adc9d606c3b04d56b57c9", "my_sig_v"=>"0.1", "my_sig_time"=>"1225096082", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"121149113", "my_sig_added"=>"0", "my_sig_friends"=>"1627816", "my_sig_sessionId"=>"49057b92073896b9a546c9f1900a31c2", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '121149113' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 08:27:46', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '121149113', 0, NULL, '2008-10-27 08:27:46')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.015000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.016000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 08:27:46', 1, 200, 10, 1000, 61, '2008-10-27 08:27:46', NULL)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = NULL, `friend_ids` = '--- \n- \"1627816\"\n', `session_key` = '49057b92073896b9a546c9f1900a31c2', `updated_at` = '2008-10-27 08:27:46' WHERE `id` = 61[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNotice Load (0.000000)[0m   [0mSELECT * FROM `notices` WHERE (( from_xid in ('1627816','121149113') or to_xid in ('1627816','121149113') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+ERROR: compiling _run_erb_47app47views47home47index46html46erb RAISED compile error
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected tSTRING_BEG, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                          ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected tCONSTANT, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                                                                               ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                                                                                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                                                              ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                                                                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:107: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.end_request_form ).to_s); _erbout.concat "\n"
+                                                               ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:108: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:109: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:110: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.end_mlelse ).to_s); _erbout.concat "\n"
+                                                         ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:111: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.end_if_is_app_user ).to_s); _erbout.concat " \n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:112: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+                                      ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:112: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:113: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:114: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:115: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t \n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:116: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t";  else #别人正在抢 
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:117: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t ";  if @user.dock4 and @user.dock4 > 0 
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:118: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:118: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+                                                                                      ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:119: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:119: syntax error, unexpected $undefined
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+                                                                                                ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                                                                    ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                                                                                                                                                                                            ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected $undefined
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                                                                                                                                                                                                                                                                                    ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:121: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:121: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+                                                                                   ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                                    ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                                                          ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                                                                                      ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:123: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:123: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+                                                     ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:124: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:124: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:125: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t";  end 
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:126: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t</div>\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:127: unknown regexp options - dv
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:127: syntax error, unexpected $undefined
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:129: unknown regexp options - rb
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:129: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "<form action=\"home/rob/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\">\n"
+                                                                                               ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:248: syntax error, unexpected kEND, expecting '}'
+Function body: def _run_erb_47app47views47home47index46html46erb(local_assigns)
+_erbout = '';  ml = Ml.new ; _erbout.concat "\n"
+_erbout.concat "<style type=\"text/css\">\n"
+_erbout.concat "#mybody {\n"
+_erbout.concat "\twidth: 620px;\n"
+_erbout.concat "\tfloat:left;\n"
+_erbout.concat "\tpadding: 5px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#docklist{\n"
+_erbout.concat "}\n"
+_erbout.concat "#roblist{\n"
+_erbout.concat "}\n"
+_erbout.concat ".dock {\n"
+_erbout.concat "\tfloat: left;\n"
+_erbout.concat "\twidth:155px;\n"
+_erbout.concat "\ttext-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat "#friendlist {\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "width:160px;\n"
+_erbout.concat "height:300px;\n"
+_erbout.concat "overflow:auto;\n"
+_erbout.concat "}\n"
+_erbout.concat "\n"
+_erbout.concat "#islandinfo{\n"
+_erbout.concat "\tcolor:red;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat "#piratenews{\n"
+_erbout.concat "\tcolor:green;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticeone {\n"
+_erbout.concat "height:25px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticecontent {\n"
+_erbout.concat "float:left;\n"
+_erbout.concat "height:28px;\n"
+_erbout.concat "width:500px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#myshipspan{\n"
+_erbout.concat "\tcolor:blue;\n"
+_erbout.concat "\tfont-weight: bold;\n"
+_erbout.concat "}\n"
+_erbout.concat ".ship{\n"
+_erbout.concat "float:left;\n"
+_erbout.concat "width:180px;\n"
+_erbout.concat "text-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat "\n"
+_erbout.concat "h4 {\n"
+_erbout.concat "text-align:center;height:25px;background:#D8DFEA none repeat scroll 0%;\n"
+_erbout.concat "border-top:1px solid #3B5888;font-size:14px;font-weight:bold;line-height:25px;font-weight:bold;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gray{\n"
+_erbout.concat "color: #666666;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gotofriend{\n"
+_erbout.concat "color:#0000ff;\n"
+_erbout.concat "text-align:right;\n"
+_erbout.concat "}\n"
+_erbout.concat "#mybody #noticelist #noticetime {\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "}\n"
+_erbout.concat "#notify\n"
+_erbout.concat "{\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "width:160px;\n"
+_erbout.concat "height:100px;\n"
+_erbout.concat "}\n"
+_erbout.concat "#business_dock\n"
+_erbout.concat "{\n"
+_erbout.concat "border:2px solid #225599;\n"
+_erbout.concat "float: left;\n"
+_erbout.concat "width:151px;\n"
+_erbout.concat "text-align:center;\n"
+_erbout.concat "}\n"
+_erbout.concat ".gorob{\n"
+_erbout.concat "float:right;\n"
+_erbout.concat "text-size:15px;\n"
+_erbout.concat "}\n"
+_erbout.concat "</style>\n"
+_erbout.concat "\n"
+_erbout.concat "<div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"mybody\">\n"
+_erbout.concat "<div class=\"gotofriend\"></div>\n"
+_erbout.concat "<div id=\"islandinfo\">"; _erbout.concat(( ml.userpic("uid" => @user.xid,"linked"=>"true") ).to_s); _erbout.concat(( ml.name("uid"=>@user.xid)).to_s); _erbout.concat "\347\232\204\345\260\217\345\262\233<span class=\"gorob\">"; _erbout.concat(( link_to ">>去抢劫好友",:controller => :home ,:action => :friend  ).to_s); _erbout.concat "</span><br>\n"
+_erbout.concat "<hr /></div>\n"
+_erbout.concat "<div id=\"docklist\">\n"
+_erbout.concat "<div id=\"dock1\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"dock2\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"dock3\" class=\"dock\">"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\347\240\201\345\244\264</div>\n"
+_erbout.concat "<div id=\"business_dock\" >"; _erbout.concat(( ml.image("dock") ).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\350\264\270\346\230\223\347\240\201\345\244\264<br>\n"
+_erbout.concat "&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock4 == nil or @user.dock4 == 0) and @current_user.xid != @user.xid
+_erbout.concat(( ml.if_is_app_user({"uid" => @user.xid}) ).to_s); _erbout.concat " \n"
+_erbout.concat "<form action=\"business/business/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\"> \n"
+_erbout.concat " "; _erbout.concat(( submit_tag "贸易" , :name => "dock" ,:value => "贸易" ).to_s); _erbout.concat "\n"
+_erbout.concat "</form>\n"
+_erbout.concat(( ml.mlelse ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.end_request_form ).to_s); _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat(( ml.end_mlelse ).to_s); _erbout.concat "\n"
+_erbout.concat(( ml.end_if_is_app_user ).to_s); _erbout.concat " \n"
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+_erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t \n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock4 and @user.dock4 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t</div>\n"
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<form action=\"home/rob/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\">\n"
+_erbout.concat "<div id=\"roblist\">\n"
+_erbout.concat "\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock1 == nil or @user.dock1 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头1" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock1 and @user.dock1 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock1) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t \345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock1_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201\n"
+_erbout.concat "\t\t\t\t ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头1" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t  ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock2 == nil or @user.dock2 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头2" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock2 and @user.dock2 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock2) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t ";  if @user.dock2_time ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock2_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头2" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t&nbsp;\n"
+_erbout.concat "\t\t";  if (@user.dock3 == nil or @user.dock3 == 0) and @current_user.xid != @user.xid 
+_erbout.concat "\t\t\t "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "抢劫码头3" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t";  else #别人正在抢 
+_erbout.concat "\t\t\t ";  if @user.dock3 and @user.dock3 > 0 
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock3) ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\234\250\350\257\245\347\240\201\345\244\264\346\212\242\345\212\253<br>\n"
+_erbout.concat "\t\t\t\t ";  if @user.dock3_time ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - @user.dock3_time,usership.capacity,usership.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "夺回码头3" ).to_s); _erbout.concat "\n"
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t\t ";  end ; _erbout.concat " \n"
+_erbout.concat "\t\t";  end 
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div  class=\"dock\">\n"
+_erbout.concat "\t\n"
+_erbout.concat "\t</div>\n"
+_erbout.concat "\t<div style=\"clear:both;\"></div>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div id=\"shiplist\">\n"
+_erbout.concat "<hr />\n"
+_erbout.concat "<span id=\"myshipspan\">\346\210\221\347\232\204\350\210\271\345\217\252</span><br>\n"
+_erbout.concat "<ul>\n"
+ i = 0 ; _erbout.concat "\n"
+ @current_user.usership.each do |ship|  
+ i += 1 ; _erbout.concat "\n"
+_erbout.concat "\t<li class=\"ship\">\n"
+_erbout.concat "    \n"
+_erbout.concat "\t"; _erbout.concat(( usershipimg(ship)).to_s); _erbout.concat "<br>\n"
+_erbout.concat "\t"; _erbout.concat(( radio_button  "usership","id", ship.id , :checked => "checked" ).to_s); _erbout.concat " "; _erbout.concat(( ship.name ).to_s); _erbout.concat "\n"
+_erbout.concat "\t";  if ship.robof && ship.robof.to_s > '0'   ; _erbout.concat "\n"
+_erbout.concat "\t<span class=\"gray\">(\346\255\243\345\234\250"; _erbout.concat(( link_to ml.name({"uid"=>ship.robof,"linked" => "false"}), :controller => :home , :action => :friend ,:id => ship.robof ).to_s); _erbout.concat "\347\232\204\345\262\233\344\270\212\347\203\247\346\235\200\346\212\242\346\216\240)</span><br>\n"
+_erbout.concat "     ";  if ship.robtime ; _erbout.concat "\345\267\262\347\273\217\346\216\240\345\244\272\344\272\206"; _erbout.concat(( conversion(Time.now - ship.robtime,ship.capacity,ship.robspeed).to_i ).to_s); _erbout.concat "\344\270\252\351\207\221\345\270\201";  end ; _erbout.concat "\n"
+_erbout.concat "\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</li>\n"
+_erbout.concat "\t";  if i % 4 == 0 ; _erbout.concat "\n"
+_erbout.concat "\t<li style=\"clear:both\"></li>\n"
+_erbout.concat "\t";  end ; _erbout.concat "\n"
+ end 
+_erbout.concat "</ul>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div style=\"clear:both\"></div>\n"
+_erbout.concat "</form>\n"
+ if @mynotice ; _erbout.concat "\n"
+_erbout.concat "\t<div  id=\"noticelist\">\n"
+_erbout.concat "\t\t<hr />\n"
+_erbout.concat "\t\t<span id=\"piratenews\">\346\265\267\347\233\227\345\277\253\350\256\257  "; _erbout.concat(( link_to "查看更多",:controller => :notice ).to_s); _erbout.concat "</span>\n"
+_erbout.concat "\t\t";  if @mynotice.length ==0 ; _erbout.concat "\n"
+_erbout.concat "\t\t\t<br><span class=\"gray\">\346\232\202\346\227\240\344\277\241\346\201\257</span>\n"
+_erbout.concat "\t\t";  else ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t\t\t"; @mynotice.each do |n|; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t\t\t<div id=\"noticecontent\">"; _erbout.concat(( n.content ).to_s); _erbout.concat "</div><div id=\"noticetime\">"; _erbout.concat(( distance_of_time_in_words(Time.now,n.updated_at) ).to_s); _erbout.concat "</div><div style=\"clear:both;\"></div>\n"
+_erbout.concat "\n"
+_erbout.concat "\t\t\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t\t\t\n"
+_erbout.concat "\t\t";  end ; _erbout.concat "\n"
+_erbout.concat "\t</div>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "</div>\n"
+_erbout.concat "<div id=\"notify\">\n"
+_erbout.concat "<h4>\345\205\254\345\221\212</h4>\n"
+_erbout.concat "<ul>\n"
+_erbout.concat "<li>\344\270\215\344\274\232\347\216\251\357\274\237"; _erbout.concat(( link_to "查看帮助",:controller => :home,:action => :index ,:help =>"1" ).to_s); _erbout.concat "\n"
+_erbout.concat "</li>\n"
+_erbout.concat "</ul>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"friendlist\"  >\n"
+_erbout.concat "\n"
+_erbout.concat "<h4>\346\265\267\347\233\227\345\245\275\345\217\213</h4>\n"
+ @current_user.friend_ids.each do |friend| ; _erbout.concat "\n"
+_erbout.concat "<div>\n"
+_erbout.concat(( link_to ml.name({"uid" => friend}),:controller => :home,:action => :friend,:id => friend ).to_s); _erbout.concat "\n"
+_erbout.concat "</div>\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout.concat "</div>"; _erbout
+end
+Backtrace: D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:248:in `compile_template'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:55:in `prepare!'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:34:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:845:in `render_with_no_layout'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1161:in `default_render'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected tSTRING_BEG, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                          ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected tCONSTANT, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                                                                               ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:105: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) ).to_s); _erbout.concat "\n"
+                                                                                                                                                                                                                                                                                                                                                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                                                              ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:106: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) ).to_s); _erbout.concat "\n"
+                                                                                                             ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:107: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.end_request_form ).to_s); _erbout.concat "\n"
+                                                               ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:108: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:109: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:110: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.end_mlelse ).to_s); _erbout.concat "\n"
+                                                         ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:111: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( ml.end_if_is_app_user ).to_s); _erbout.concat " \n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:112: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+                                      ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:112: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat(( link_to "换下一个",:controller=>:home,:action => :friend,:id=>nil ).to_s); _erbout.concat " \n"
+                                                                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:113: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:114: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:115: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t \n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:116: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t";  else #别人正在抢 
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:117: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t ";  if @user.dock4 and @user.dock4 > 0 
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:118: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:118: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  usership = Usership.find(@user.dock4) ; _erbout.concat "\n"
+                                                                                      ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:119: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:119: syntax error, unexpected $undefined
+_erbout.concat "\t\t\t\t "; _erbout.concat(( usershipimg(usership)).to_s); _erbout.concat "<br>\n"
+                                                                                                ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                                                                    ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                                                                                                                                                                                            ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:120: syntax error, unexpected $undefined
+_erbout.concat "\t\t\t\t "; _erbout.concat(( ml.image("small_skull") ).to_s); _erbout.concat(( link_to ml.name({"uid" => usership.user.xid}), :controller => :home , :action => :friend ,:id => usership.user.xid ).to_s); _erbout.concat "\346\255\243\345\201\234\351\235\240\345\234\250\350\257\245\347\240\201\345\244\264<br>\n"
+                                                                                                                                                                                                                                                                                                                                    ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:121: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:121: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t  ";  if @current_user.xid == @user.xid ; _erbout.concat "\n"
+                                                                                   ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                                    ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected tIDENTIFIER, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                                                          ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:122: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t\t  "; _erbout.concat(( submit_tag "抢劫" , :name => "dock" ,:value => "赶跑TA" ).to_s); _erbout.concat "\n"
+                                                                                                                                      ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:123: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:123: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t\t ";  end ; _erbout.concat " \n"
+                                                     ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:124: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:124: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t\t ";  end ; _erbout.concat "\n"
+                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:125: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t\t";  end 
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:126: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "\t</div>\n"
+                 ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:127: unknown regexp options - dv
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:127: syntax error, unexpected $undefined
+_erbout.concat "<div style=\"clear:both;\"></div>\n"
+                                                  ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:129: unknown regexp options - rb
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:129: syntax error, unexpected $undefined, expecting '}'
+_erbout.concat "<form action=\"home/rob/"; _erbout.concat(( @user.id ).to_s); _erbout.concat "\">\n"
+                                                                                               ^
+D:/ruby/rails_apps/my/lpiratemy/app/views/home/index.html.erb:248: syntax error, unexpected kEND, expecting '}') on line #105 of home/index.html.erb:
+102:  <%= submit_tag "贸易" , :name => "dock" ,:value => "贸易" %>
+103: </form>
+104: <%= ml.mlelse %>
+105: <%= ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海<my:req-choice url='#{ @current_user.prefix}userapp.php?id=1007758&my_suffix=#{u(Base64.encode64('userapp.php?id=1007758'))",:label=>'我愿意' ,:id=>"myformb",:method => "POST"}) %>
+106: <%= ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) %>
+107: <%= ml.end_request_form %>
+108: 
+
+    app/views/home/index.html.erb:248:in `compile_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:55:in `prepare!'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:34:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1161:in `default_render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
