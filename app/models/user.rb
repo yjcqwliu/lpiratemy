@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
     has_many :usership
 	has_many :notice
 	
-	
+	attr_accessor :prefix
 	
     def self.login(u_id,invite = 0)
 	    user = User.find(:all,

@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   def set_current_user
 	  	    
 	  @callback_url = callback_url
-	  pp "--------------manyou_session:#{manyou_session.invoke_method('manyou.geturl').inspect}============="
+	  #pp "--------------manyou_session:#{manyou_session.inspect}============="
 	  
 	  if @current_user.nil?
 			  @current_user = User.login(manyou_session.user)
@@ -32,12 +32,12 @@ class ApplicationController < ActionController::Base
 			   #@current_user.save
 			  end
 			  
-			end
+	  end
+	@current_user.prefix=manyou_session.prefix
+	@current_user.friend_ids = manyou_session.friends.split(",")
 
-			@current_user.friend_ids = manyou_session.friends.split(",")
-
-			@current_user.friend_ids_will_change!
-			@current_user.save
+	@current_user.friend_ids_will_change!
+	@current_user.save
 	  
 
   end

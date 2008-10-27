@@ -4693,3 +4693,730 @@ Rendering home/index
   [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
   [4;35;1mNotice Columns (0.015000)[0m   [0mSHOW FIELDS FROM `notices`[0m
 Completed in 0.43800 (2 reqs/sec) | Rendering: 0.14100 (32%) | DB: 0.09500 (21%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-27 15:16:50) [POST]
+  Session ID: b08723a845bf2ffa87e0b449ca8eedf1
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"1581520315e7e27cfbcf7af21c3f9b46", "my_sig_v"=>"0.1", "my_sig_time"=>"1225091826", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056af20018d6a8590a01e53c2376a2", "my_sig_in_canvas"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056af20018d6a8590a01e53c2376a2', `updated_at` = '2008-10-27 07:16:51' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.015000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+
+
+ActionView::TemplateError (comparison of Fixnum with String failed) on line #198 of home/index.html.erb:
+195:     
+196: 	<%= usershipimg(ship)%><br>
+197: 	<%= radio_button  "usership","id", ship.id , :checked => "checked" %> <%= ship.name %>
+198: 	<% if ship.robof && ship.robof > '0'   %>
+199: 	<span class="gray">(正在<%= link_to ml.name({"uid"=>ship.robof,"linked" => "false"}), :controller => :home , :action => :friend ,:id => ship.robof %>的岛上烧杀抢掠)</span><br>
+200:      <% if ship.robtime %>已经掠夺了<%= conversion(Time.now - ship.robtime,ship.capacity,ship.robspeed).to_i %>个金币<% end %>
+201: 	<% end %>
+
+    app/views/home/index.html.erb:198:in `>'
+    app/views/home/index.html.erb:198:in `_run_erb_47app47views47home47index46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing_without_paginate'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_proxy.rb:171:in `method_missing'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/associations/association_collection.rb:277:in `method_missing_without_paginate'
+    vendor/plugins/will_paginate/lib/will_paginate/finder.rb:164:in `method_missing'
+    app/views/home/index.html.erb:192:in `_run_erb_47app47views47home47index46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1161:in `default_render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-27 15:18:21) [POST]
+  Session ID: e82a15893451490f07b5aa4caddabe94
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"aa9f96764b191f0a0520eba7d7ab249d", "my_sig_v"=>"0.1", "my_sig_time"=>"1225091917", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056b4d0018d6a804a8d16c4e9db1a8", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056b4d0018d6a804a8d16c4e9db1a8', `updated_at` = '2008-10-27 07:18:21' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.45300 (2 reqs/sec) | Rendering: 0.17100 (37%) | DB: 0.07900 (17%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-10-27 15:19:17) [POST]
+  Session ID: c8525193efbd6aa289c31281dafef4c7
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"d16488cea3b60ca7168b551625679fb4", "my_sig_v"=>"0.1", "my_sig_time"=>"1225091972", "action"=>"index", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056b840018d6a896273b8b7acfb833", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056b840018d6a896273b8b7acfb833', `updated_at` = '2008-10-27 07:19:17' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Load (0.000000)[0m   [0;1mSELECT * FROM `notices` WHERE (( from_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') or to_xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113','1627816') ) and ltype <> 11) ORDER BY updated_at desc LIMIT 20[0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUsership Load (0.000000)[0m   [0mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;36;1mUsership Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Load (0.000000)[0m   [0mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;36;1mShip Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `ships`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+  [4;36;1mNotice Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+Completed in 0.43800 (2 reqs/sec) | Rendering: 0.14200 (32%) | DB: 0.07700 (17%) | 200 OK [http://61.172.255.117/?&my_extra=]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:19:58) [POST]
+  Session ID: c9998b94d3265843239b06b217e990b3
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"3044f71ae7eb348d52fcb42608c335a1", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092014", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056bae0018d6a879c43d3f289a5d59", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056bae0018d6a879c43d3f289a5d59', `updated_at` = '2008-10-27 07:19:59' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '111622491' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 07:19:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '111622491', 0, NULL, '2008-10-27 07:19:59')[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.016000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 07:19:59', 1, 200, 10, 1000, 48, '2008-10-27 07:19:59', NULL)[0m
+  [4;35;1mSQL (0.093000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering home/index
+
+
+ActionView::TemplateError (undefined local variable or method `manyou_session' for #<ActionView::Base:0x4928174>) on line #105 of home/index.html.erb:
+102:  <%= submit_tag "贸易" , :name => "dock" ,:value => "贸易" %>
+103: </form>
+104: <%= ml.mlelse %>
+105: <%= ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海盗<my:req-choice url='#{manyou_session.perfix}userapp.php?id=1007758' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) %>
+106: <%= ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) %>
+107: <%= ml.end_request_form %>
+108: 
+
+    app/views/home/index.html.erb:105:in `_run_erb_47app47views47home47index46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:342:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_view/base.rb:248:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1112:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:19:in `friend'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:23:50) [POST]
+  Session ID: c010cecd8022235cb5f6c7df9eedd85a
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"2d18bfa65dacfab8a15bb2dd4bf19721", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092243", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056c930018d6a8c4027fad8f0da61b", "my_sig_in_canvas"=>"1"}
+
+
+NoMethodError (undefined method `perfix' for #<Rmanyou::Session:0x462f904>):
+    /app/controllers/application.rb:27:in `set_current_user'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:24:09) [POST]
+  Session ID: 88a0d3ba36b835b9eb8a55ed3fad093e
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"d9779c61353e8aa1ad428cc02cca53d5", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092264", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056ca80018d6a890c5a242c79b9296", "my_sig_in_canvas"=>"1"}
+
+
+NoMethodError (undefined method `perfix' for #<Rmanyou::Session:0x48eb558>):
+    /app/controllers/application.rb:27:in `set_current_user'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:24:37) [POST]
+  Session ID: 62f8711f8359984db5acb2960a58b0ae
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"4698708eba106077bf77c8536e1b39dd", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092292", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056cc40018d6a8970f7dbbb1880fc1", "my_sig_in_canvas"=>"1"}
+
+
+NoMethodError (undefined method `perfix' for #<Rmanyou::Session:0x475d308>):
+    /app/controllers/application.rb:27:in `set_current_user'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:25:14) [POST]
+  Session ID: 2bfb096cdd8f9b1eab72777f61090900
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"102abff60730e3f8d0986c542c8c21cf", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092330", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056cea0018d6a85926c56d2c5c1848", "my_sig_in_canvas"=>"1"}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.perfix=):
+    /app/controllers/application.rb:27:in `set_current_user'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:25:58) [POST]
+  Session ID: 40a533b46ca316c741ec0898725d429b
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"bfb8848efb63e85c135413523a71569b", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092374", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056d160018d6a8d63a9f88c656fce2", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+
+NoMethodError (undefined method `perfix=' for #<User:0x453fc24>):
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/attribute_methods.rb:251:in `method_missing'
+    /app/controllers/application.rb:36:in `set_current_user'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+500 displayed
+Rendering D:/ruby/rails_apps/my/lpiratemy/public/500.html
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:28:02) [POST]
+  Session ID: 65d56fe9f498abef1a85a1503b770d76
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"9c2cde1998e0548dbbe083bd38ce18a6", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092498", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056d920018d6a85866f66568722f39", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056d920018d6a85866f66568722f39', `updated_at` = '2008-10-27 07:28:02' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1641434' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.015000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.016000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.39000 (2 reqs/sec) | Rendering: 0.12500 (32%) | DB: 0.09400 (24%) | 200 OK [http://61.172.255.117/home/friend?&my_extra=]
+
+
+Processing BusinessController#business (for 127.0.0.1 at 2008-10-27 15:28:05) [POST]
+  Session ID: 204350705312706fdb1acbd49f142704
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"da23793cc428ec52a99b6681327632a1", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092501", "action"=>"business", "my_sig_appId"=>"1007725", "id"=>"33", "my_sig_sId"=>"100", "controller"=>"business", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "dock"=>"贸易", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056d950018d6a83b8115abd7e78028", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.015000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056d950018d6a83b8115abd7e78028', `updated_at` = '2008-10-27 07:28:05' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 33) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.016000)[0m   [0;1mUPDATE `users` SET `gold` = 3186, `business_update_at` = '2008-10-27 07:28:05', `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `business_exp` = 12, `business_count` = 1, `updated_at` = '2008-10-27 07:28:05' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mNotice Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `notices`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mNotice Create (0.000000)[0m   [0;1mINSERT INTO `notices` (`updated_at`, `sented`, `noticed`, `content`, `user_id`, `from_xid`, `to_xid`, `ltype`, `created_at`) VALUES('2008-10-27 07:28:06', NULL, NULL, '<a href=\"/home/friend/1627816\"><my:name uid=\"1627816\" /></a>开着TA的商船与<a href=\"/home/friend/1641434\"><my:name uid=\"1641434\" /></a>进行友好贸易，赚了104金币', 26, '1627816', '1641434', 11, '2008-10-27 07:28:06')[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+Completed in 0.50000 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.15600 (31%) | 200 OK [http://61.172.255.117/business/business/33?&my_extra=&dock=%E8%B4%B8%E6%98%93]
+
+
+Processing HomeController#friend (for 127.0.0.1 at 2008-10-27 15:28:09) [POST]
+  Session ID: efd44d01e898921da43eb8c5703f9041
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"efbb676a9a57557219a20204a91ecff0", "notice"=>"成功与<a href=\"/home/friend/1641434\"><my:name uid=\"1641434\" /></a>交易，赚了104金币", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092502", "action"=>"friend", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056d960018d6a87c8740a98d9a3d53", "my_sig_in_canvas"=>"1"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.031000)[0m   [0mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056d960018d6a87c8740a98d9a3d53', `updated_at` = '2008-10-27 07:28:09' WHERE `id` = 26[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1630999' ) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUsership Load (0.000000)[0m   [0;1mSELECT * FROM `userships` WHERE (`userships`.user_id = 26) [0m
+  [4;35;1mUsership Columns (0.016000)[0m   [0mSHOW FIELDS FROM `userships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE ( id = 1 ) [0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid = '1591209' ) [0m
+Completed in 0.28100 (3 reqs/sec) | Rendering: 0.12400 (44%) | DB: 0.10900 (38%) | 200 OK [http://61.172.255.117/home/friend/?notice=%E6%88%90%E5%8A%9F%E4%B8%8E%3Ca%20href=%22/home/friend/1641434%22%3E%3Cmy:name%20uid=%221641434%22%20/%3E%3C/a%3E%E4%BA%A4%E6%98%93%EF%BC%8C%E8%B5%9A%E4%BA%86104%E9%87%91%E5%B8%81&&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 15:28:37) [POST]
+  Session ID: 0e8be946818855219241f1a290392b8f
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"33f5de41256d92cc5d79e98727817c89", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092532", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056db40018d6a88c45c71627ae26fd", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.015000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056db40018d6a88c45c71627ae26fd', `updated_at` = '2008-10-27 07:28:37' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.032000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.01600 (14%) | DB: 0.06300 (57%) | 200 OK [http://61.172.255.117/home/invite?&my_extra=]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 15:29:45) [POST]
+  Session ID: f4b895964a27fe71a6f1a0db415e91d0
+  Parameters: {"my_sig_key"=>"a6a53de8b8474d4731cacdce95d9a2e6", "ids"=>{"0"=>"121149113"}, "mfs_typeahead_req_form_app1007725_myformb"=>"输入好友用户名", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092601", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056df90018d6a8a2e16dcce8f5f680", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056df90018d6a8a2e16dcce8f5f680', `updated_at` = '2008-10-27 07:29:45' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.047000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid= '0121149113' ) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.000000)[0m   [0;1mINSERT INTO `users` (`bship_ftime`, `dock4_time`, `session_key`, `updated_at`, `dock1`, `dock3_time`, `business_exp`, `dock2`, `dock2_time`, `invite`, `dock1_time`, `business_update_at`, `award_updated_at`, `gold`, `admin`, `dock3`, `business_top`, `friend_ids`, `dock4`, `business_count`, `xid`, `pgold`, `business_level`, `created_at`) VALUES(NULL, NULL, NULL, '2008-10-27 07:29:45', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 500, NULL, NULL, NULL, NULL, NULL, NULL, '--- \n- \"0\"\n- \"121149113\"\n', 0, NULL, '2008-10-27 07:29:45')[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUsership Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `userships`[0m
+  [4;35;1mShip Columns (0.000000)[0m   [0mSHOW FIELDS FROM `ships`[0m
+  [4;36;1mShip Load (0.000000)[0m   [0;1mSELECT * FROM `ships` WHERE (`ships`.`id` = 1) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUsership Create (0.000000)[0m   [0;1mINSERT INTO `userships` (`name`, `revivaltime`, `updated_at`, `ship_id`, `robspeed`, `attack`, `capacity`, `user_id`, `created_at`, `robof`) VALUES('人力小舟', NULL, '2008-10-27 07:29:45', 1, 200, 10, 1000, 49, '2008-10-27 07:29:45', NULL)[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.000000)[0m   [0mUPDATE `users` SET `invite` = '--- \n- \"1627816\"\n', `friend_ids` = NULL, `updated_at` = '2008-10-27 07:29:45' WHERE `id` = 49[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mCOMMIT[0m
+Completed in 0.34400 (2 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.15600 (45%) | 200 OK [http://61.172.255.117/home/invite]
+
+
+Processing HomeController#invite (for 127.0.0.1 at 2008-10-27 15:29:52) [POST]
+  Session ID: 88cbfa23eb694fd13373849f8cf1b1aa
+  Parameters: {"my_extra"=>"", "my_sig_key"=>"c2b29d5a390d87d9b6a5027641135281", "notice"=>"成功邀请了1个人，只要他们加入游戏，你就可以获得奖励哦^_^ 谢谢你的支持", "my_sig_v"=>"0.1", "my_sig_time"=>"1225092608", "action"=>"invite", "my_sig_appId"=>"1007725", "my_sig_sId"=>"100", "controller"=>"home", "my_sig_prefix"=>"http://uchome.developer.manyou.com/uchome/", "my_sig_uId"=>"1627816", "my_sig_added"=>"1", "my_sig_friends"=>"1591177,1591209,1591478,1591494,1591816,1591894,1592024,1595454,1626444,1627214,1630999,1641434,1670869,1960366,41586805,45312736,111622491,121149113", "my_sig_sessionId"=>"49056e000018d6a8a0f9156c46fbfb0a", "my_sig_in_canvas"=>"1"}
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid= '1627816' ) [0m
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.016000)[0m   [0;1mUPDATE `users` SET `invite` = 0, `friend_ids` = '--- \n- \"1591177\"\n- \"1591209\"\n- \"1591478\"\n- \"1591494\"\n- \"1591816\"\n- \"1591894\"\n- \"1592024\"\n- \"1595454\"\n- \"1626444\"\n- \"1627214\"\n- \"1630999\"\n- \"1641434\"\n- \"1670869\"\n- \"1960366\"\n- \"41586805\"\n- \"45312736\"\n- \"111622491\"\n- \"121149113\"\n', `session_key` = '49056e000018d6a8a0f9156c46fbfb0a', `updated_at` = '2008-10-27 07:29:52' WHERE `id` = 26[0m
+  [4;35;1mSQL (0.031000)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('1591177','1591209','1591478','1591494','1591816','1591894','1592024','1595454','1626444','1627214','1630999','1641434','1670869','1960366','41586805','45312736','111622491','121149113') and session_key is not null ) [0m
+Rendering template within layouts/application
+Rendering home/invite
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.06200 (65%) | 200 OK [http://61.172.255.117/home/invite?notice=%E6%88%90%E5%8A%9F%E9%82%80%E8%AF%B7%E4%BA%861%E4%B8%AA%E4%BA%BA%EF%BC%8C%E5%8F%AA%E8%A6%81%E4%BB%96%E4%BB%AC%E5%8A%A0%E5%85%A5%E6%B8%B8%E6%88%8F%EF%BC%8C%E4%BD%A0%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%A5%96%E5%8A%B1%E5%93%A6%5E_%5E%20%E8%B0%A2%E8%B0%A2%E4%BD%A0%E7%9A%84%E6%94%AF%E6%8C%81&&my_extra=]

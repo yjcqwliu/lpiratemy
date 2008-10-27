@@ -12,8 +12,8 @@ text-align:center;
 <strong>邀请</strong><br>
 <my:request-form method="POST" 
 type='海盗时代' invite="true" 
-content="很好玩的海盗游戏哦<my:req-choice url='#{manyou_session.perfix}userapp.php?id=1007758' label='我愿意'>"  
+content="很好玩的海盗游戏哦<my:req-choice url='#{@current_user.perfix}userapp.php?id=1007758' label='我愿意'>"  
 id="myformb" invite="true" action="home/invite">
-<my:multi-friend-selector actiontext="邀请好友加海盗时代" showborder="false" rows="4" max="20">
+<my:multi-friend-selector actiontext="邀请好友加海盗时代" showborder="false" rows="4" max="50">
 </my:request-form>
 </div>

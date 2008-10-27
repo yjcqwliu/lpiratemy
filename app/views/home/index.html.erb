@@ -102,7 +102,7 @@ text-size:15px;
  <%= submit_tag "贸易" , :name => "dock" ,:value => "贸易" %>
 </form>
 <%= ml.mlelse %>
-<%= ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海盗<my:req-choice url='#{manyou_session.perfix}userapp.php?id=1007758' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) %>
+<%= ml.request_form({:type => "海盗时代",:action => "business/invite?ids=#{@user.id}",:invite => "true" ,:content =>"邀请你一起来做海盗<my:req-choice url='#{@current_user.prefix}userapp.php?id=1007758' label='我愿意'>" ,:id=>"myformb",:method => "POST"}) %>
 <%= ml.request_form_submit({"uid" => @user.xid,"label" => "倒卖" }) %>
 <%= ml.end_request_form %>
 
@@ -195,7 +195,7 @@ text-size:15px;
     
 	<%= usershipimg(ship)%><br>
 	<%= radio_button  "usership","id", ship.id , :checked => "checked" %> <%= ship.name %>
-	<% if ship.robof && ship.robof > '0'   %>
+	<% if ship.robof && ship.robof.to_s > '0'   %>
 	<span class="gray">(正在<%= link_to ml.name({"uid"=>ship.robof,"linked" => "false"}), :controller => :home , :action => :friend ,:id => ship.robof %>的岛上烧杀抢掠)</span><br>
      <% if ship.robtime %>已经掠夺了<%= conversion(Time.now - ship.robtime,ship.capacity,ship.robspeed).to_i %>个金币<% end %>
 	<% end %>
@@ -204,9 +204,9 @@ text-size:15px;
 	<li style="clear:both"></li>
 	<% end %>
 <% end -%>
-<li style="clear:both;"></li>
 </ul>
 </div>
+<div style="clear:both"></div>
 </form>
 <% if @mynotice %>
 	<div  id="noticelist">
